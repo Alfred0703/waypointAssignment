@@ -1,0 +1,8 @@
+<p>weather works!</p>
+ <!-- Basic weather -->
+<div *ngIf="weatherData">
+    <h2>Weather in {{ weatherData.name }}, {{ weatherData.sys.country }}</h2>
+    <p>Temperature: {{ weatherData.main.temp }}°C</p>
+    <p>Conditions: {{ weatherData.weather[0].description }}</p>
+  </div>
+  

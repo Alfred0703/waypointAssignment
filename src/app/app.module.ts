@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule for error in
 
 import { AppComponent } from './app.component';
 import { InputFormComponent } from './input-form/input-form.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputFormComponent
+    InputFormComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,

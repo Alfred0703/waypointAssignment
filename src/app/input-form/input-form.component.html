@@ -1,1 +1,16 @@
 <p>input-form works!</p>
+<form (submit)="onSubmit()">
+    <label for="numberInput">Number:</label>
+    <input type="number" id="numberInput" name="numberInput" [(ngModel)]="formData.number" required>
+  
+    <label for="textInput">Text:</label>
+    <input type="text" id="textInput" name="textInput" [(ngModel)]="formData.text" required>
+  
+    <label for="dateInput">Date:</label>
+    <input type="date" id="dateInput" name="dateInput" [(ngModel)]="formData.date" required>
+  
+    <input type="hidden" name="hiddenInput" [(ngModel)]="formData.hidden" value="hello there">
+  
+    <button type="submit">Submit</button>
+  </form>
+  

@@ -1,8 +1,23 @@
-<p>weather works!</p>
  <!-- Basic weather -->
 <div *ngIf="weatherData">
     <h2>Weather in {{ weatherData.name }}, {{ weatherData.sys.country }}</h2>
     <p>Temperature: {{ weatherData.main.temp }}°C</p>
     <p>Conditions: {{ weatherData.weather[0].description }}</p>
+
+    <button (click)="fetchTomorrowForecast()">Get tomorrow's Forecast</button>
+    <button (click)="fetchDayAfterTomorrowForecast()">Get Day After tomorrow's Forecast</button>
   </div>
   
+<!-- Tomorrow's Forecast -->
+<div *ngIf="tomorrowForecast">
+  <h3>Tomorrow's Forecast</h3>
+  <p>Temperature: {{ tomorrowForecast?.main?.temp }}°C</p>
+  <p>Conditions: {{ tomorrowForecast?.weather[0].description }}</p>
+</div>
+
+<!-- Day After tomorrow's Forecast -->
+<div *ngIf="dayAfterTomorrowForecast">
+  <h3>Day After Tomorrow's Forecast</h3>
+  <p>Temperature: {{ dayAfterTomorrowForecast?.main?.temp }}°C</p>
+  <p>Conditions: {{ dayAfterTomorrowForecast?.weather[0].description }}</p>
+</div>
